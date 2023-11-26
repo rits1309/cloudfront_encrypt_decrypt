@@ -1,0 +1,6 @@
+
+  var config = {};
+  config.REGION = 'us-east-1'
+  config.USERPOOLID = 'us-east-1_7fg4uMbdC'
+  config.JWKS = '{"keys":[{"alg":"RS256","e":"AQAB","kid":"om8GpIAqSedDKJT8/cNeKlqA9+7iRO1xk5qLm1OeBVs=","kty":"RSA","n":"u9Mh_YwV3Wrk2W5AnSpvz3R1MX3LeEHtn_903iojFpql3Al45JnMMVqaZfa6gJFJFpdDEI5ABZJpOwTIUlbe8kxOLQyCNPYpTldoHGVxQJ0hPrJtSM2B0a-Yq_WJYDjkUD2em6q27ttSl64WdN7SIoFnLiO79FEXcudWDk2QWZi72O81MTd--athyVWjOP-71O9zM-hAczsO7BvmP1CxlB2eoI6qOrX8zzV5-61hO-umqwGio9HbM78GiroOOIStFsuvrEQmNKb9e6Qt3omjZWu9T1t2V1lNBkydXdbBVb8oe4H-ILp-DStmVQTgq7t8LefrF7nbFCmeP0iVhtO9tQ","use":"sig"},{"alg":"RS256","e":"AQAB","kid":"sKSX5aa5JNI878ti664VDY2cxJ99aBgIXEukuMe2YV4=","kty":"RSA","n":"xbWx4mRJlWs6YkOm0VKizrT_b4rT8pARhO9rF5swh6-mz_OOFpEjjGH_7pt6PWkZJZAa22VQdNcyfYx7iB69eSoyvwwlgfLe2OJ0hImRvSjeu8vgJb_2_itjJ7AOY8o8hrwuwMGc6lhB8X0woMWY8GK-uT4mEB-RP5Vl532e1WLspvz0DGod99-ixakshPrVKfOHTCxKY5YqV9Fd9x5wFcYd-eMWo008tQKgWQnWLldLsCkdJuzxo_6YDPUQ5sJtuAndrH0oBrCxKu7op6XuvWqxTUuyilD0petj0DwV3x_3H2m5whG96MzoU04d3aSXUUc8sry2m1dHIU7HH7Emzw","use":"sig"}]}'
+  module.exports = config;

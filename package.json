@@ -1,0 +1,35 @@
+{
+  "name": "cf-jw-auth",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@aws-amplify/auth": "^4.5.2",
+    "@aws-amplify/core": "^4.5.2",
+    "@aws-amplify/ui-react": "^2.15.5",
+    "config": "^3.3.7",
+    "react": "^18.1.0",
+    "react-bootstrap": "^2.3.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "videojs-contrib-quality-levels": "^2.1.0",
+    "videojs-hls-quality-selector": "^1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
