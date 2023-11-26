@@ -186,5 +186,4 @@ If you need to remove the resources deployed by this sample, you can use the com
   amplify delete
 ```
 
-### License Summary
-This sample code is made available under a modified MIT-0 [LICENSE](LICENSE)# cloudfront-secure-jwt-en-de
+
