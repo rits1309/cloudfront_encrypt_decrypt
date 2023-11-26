@@ -4,7 +4,7 @@ Video streaming is no longer exclusively done by media companies. Schools, ecomm
 
 ## Architecture overview
 
-<img src="/doc/architecture.png" alt="Architecture" />
+<img src="/doc/architecture.png" alt="Architecture"/>
 
 ## Solution components
 In this post, we walk through the implementation of the component in the web APP (GitHub repository). We also go through the cloud components for authentication, token validation, and CDN caching.
