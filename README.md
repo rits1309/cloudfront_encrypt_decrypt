@@ -33,7 +33,7 @@ For more complete steps of installing and configure AWS Amplify please visit the
 We will clone using the amplify init app. AWS Amplify will create a sample implementation on your local environment and provision the AWS backend resources: (API and Authentication).
 
 ```sh
-  git clone https://github.com/aws-samples/cloudfront-secure-media.git
+  git clone https://github.com/rits1309/cloudfront_encrypt_decrypt.git
   cd cloudfront-secure-media/
 ```
 
