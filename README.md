@@ -1,4 +1,4 @@
-# Secure your Media Workloads with JWT Token with Lambda@Edge with Encryption 
+# Secure your Media Workloads with JWT Token with Lambda@Edge along Encryption with Amazon KMS(Key Management Service). 
 
 Creating a video-on-demand (VOD) solution on AWS (Amazon Web Services) typically involves using various AWS services to store, transcode, and deliver video content to end-users.Also in some cases it becomes vulnearble for sensitive data.So data can not be simply kept in S3.It should be encrypted so that none can use it without proper authentication.
 
@@ -120,7 +120,10 @@ Example: https://someid.cloudfront.net/BigBuckBunny/BigBuckBunny.m3u8
 This step has been astracted by Amaplify Hooks, by creating a before push script.
 If you need to configure manually [follow this guide](/Cognito_MANUAL.md)
 
-### 7. *Deploy to Lambda@Edge*
+### 7. Add MediaConvert encryption context.
+ This step will encrypt contents inside S3 source bucket using KMS key.So anybody can see the encrypted content.
+
+### 8. *Deploy to Lambda@Edge*
 
 Now that we have pushed the function to check the JWT Token to the cloud, you have to deploy it to your distribution, which has been created at step 5.
 
@@ -134,6 +137,7 @@ Now that we have pushed the function to check the JWT Token to the cloud, you ha
 Then, select **Viewer Request**
 <img src="/doc/DeploytoEDGE02.png" alt="cloudfront arn" />
 
+## Note:AWS KMS should have permissions to encrypt and decrypt. 
 
 ### 8. End-to-End Tests
 
@@ -141,7 +145,7 @@ Now open your web application and play some test content.
 In the video URL field, add the full CloudFront URL of your output asset created at step 5.
 <img src="/doc/SimplePlayer.png" alt="Simple Player Demo" />
 
-### 9. Cleanup, removing the provisioned AWS resources.  **[ Optional ]**
+### 9. Cleanup, removing the provisioned AWS resources.  
 If you need to remove the resources deployed by this sample, you can use the command below:
 
 ```sh
