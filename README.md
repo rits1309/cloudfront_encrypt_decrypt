@@ -106,6 +106,8 @@ Click in *Create Account*
 
 ### 5. Setup the video workflow:
 
+Deploy VOD solution follwing **https://aws.amazon.com/solutions/implementations/video-on-demand-on-aws/**.
+
 
 Amplify Video will create the S3 bucket to store the source content, the transcoded content, it will also deploy the CloudFront distribution. Please see the sample result of amplify push.
 
