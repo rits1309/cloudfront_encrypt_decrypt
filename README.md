@@ -104,27 +104,8 @@ Click in *Create Account*
  *After the login, it should load the following local website:*
 <img src="/doc/SimplePlayer.png" alt="Simple Player Demo" />
 
-### 5. Setup the video workflow: **[ Optional ]**
-*Note: You can jump this step if you already have a video, HLS content in a S3 bucket*
+### 5. Setup the video workflow:
 
-We will be using Amplify Video (https://github.com/awslabs/amplify-video) for creating some test VOD content, Amplify Video is an open-source plugin for the Amplify CLI, that makes it easy to incorporate video streaming to your web or mobile applications. Powered by AWS Amplify (https://aws-amplify.github.io/) and AWS Media Services (https://aws.amazon.com/media-services/).
-Amplify video also supports live workflows. For more options and sample implementations, please visit amplify-video (https://github.com/awslabs/amplify-video) GitHub.
-
-```sh
-  npm i amplify-category-video -g
-
-  amplify add video
-  ? Please select from one of the below mentioned services: Video-On-Demand
-  ? Provide a friendly name for your resource to be used as a label for this category in the project: vod-wf-jwt
-  ? Select a system-provided encoding template, specify an already-created template name:  Default HLS Adaptive Bitrate
-  ? Is this a production enviroment? Yes
-  ? Do you want to protect your content with signed urls? No
-  ? Do you want Amplify to create a new GraphQL API to manage your videos? (Beta) No
-  ✔ All resources built.
-```
-```sh
-  amplify push
-```
 
 Amplify Video will create the S3 bucket to store the source content, the transcoded content, it will also deploy the CloudFront distribution. Please see the sample result of amplify push.
 
