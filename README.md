@@ -137,7 +137,7 @@ Now that we have pushed the function to check the JWT Token to the cloud, you ha
 Then, select **Viewer Request**
 <img src="/doc/DeploytoEDGE02.png" alt="cloudfront arn" />
 
-## Note:AWS KMS should have permissions to encrypt and decrypt. 
+*Note: AWS KMS should have permissions to encrypt and decrypt.* 
 
 ### 8. End-to-End Tests
 
