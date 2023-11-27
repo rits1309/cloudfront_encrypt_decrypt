@@ -1,19 +1,20 @@
-# Secure your Media Workloads with JWT Token with Lambda@Edge
+# Secure your Media Workloads with JWT Token with Lambda@Edge with Encryption 
 
-Video streaming is no longer exclusively done by media companies. Schools, ecommerce retailers, tech companies, and banks are creating media content to distribute directly to their consumers. Video streaming, both live and on-demand, has become the prevailing communication tool to reach the target audiences. As the value and number of media assets grow, creating a secure distribution workflow to ensure that only the intended audiences have access.
+Creating a video-on-demand (VOD) solution on AWS (Amazon Web Services) typically involves using various AWS services to store, transcode, and deliver video content to end-users.Also in some cases it becomes vulnearble for sensitive data.So data can not be simply kept in S3.It should be encrypted so that none can use it without proper authentication.
 
 ## Architecture overview
-
 <img src="/doc/architecture.png" alt="Architecture"/>
 
 ## Solution components
-In this post, we walk through the implementation of the component in the web APP (GitHub repository). We also go through the cloud components for authentication, token validation, and CDN caching.
+The above architecture diagram illustrates highly secure infrastructure to streamline video on demand solution by automating the configuration and management of ingesting and encoding components for highly reliable delivery of video content.
 
 The frontend and backend AWS resources are built using [AWS Amplify](https://docs.amplify.aws/), an end-to-end solution that enables mobile and front-end web developers to build and deploy secure, scalable full-stack applications. With Amplify, you can configure app backends in minutes, connect them to your app in just a few lines of code, and deploy static web apps in three steps.
 
 The web app is built in React and uses Video.JS as the video player.
 
-After successful authentication, [Amazon Cognito](https://aws.amazon.com/cognito/) returns user pool tokens to your application. Then, you can use the token to grant access to the backend resources. In the proposed architecture, the token is used for signing the requests for media stream content, Lambda@Edge function decode and validate the token attributes, authenticating the spectator to watch the content.
+Utilizing AWS Amplify, a complete solution that enables front-end and back-end web developers to create and deploy safe, scalable full-stack apps, the frontend and backend AWS resources are constructed. With Amplify, you can launch static web apps in three easy steps and quickly configure app backends by connecting them to your app in a few lines of code. 
+
+The web application was created using React, and the video player is Video.JS. After successful authentication, Amazon Cognito returns user pool tokens to your application. Then, you can use the token to grant access to the backend resources. In the proposed architecture, the token is used for signing the requests for media stream content, The Lambda@Edge function decodes and validates the token attributes, authenticating the spectator to watch the content. 
 
 
 ## Deployment Steps:
@@ -27,13 +28,6 @@ For more complete steps of installing and configure AWS Amplify please visit the
   npm install -g @aws-amplify/cli
   amplify configure
 ```
-
-*[Optional]* If you are using [AWS Cloud9](https://aws.amazon.com/cloud9/), you need to copy the cretential for the amplify config
-
-```sh
-  cp ~/.aws/credentials ~/.aws/config
-```
-
 ### 2. Clone the repository
 We will clone using the amplify init app. AWS Amplify will create a sample implementation on your local environment and provision the AWS backend resources: (API and Authentication).
 
@@ -107,22 +101,6 @@ Click in *Create Account*
 ### 5. Setup the video workflow:
 
 Deploy VOD solution follwing **https://aws.amazon.com/solutions/implementations/video-on-demand-on-aws/**.
-
-
-Amplify Video will create the S3 bucket to store the source content, the transcoded content, it will also deploy the CloudFront distribution. Please see the sample result of amplify push.
-
-```
-  Video on Demand:
-
-  Input Storage bucket:
-  vodcfjwt-dev-input-SOMEID
-
-  Output URL for content:
-  https://someid.cloudfront.net (https://someid.cloudfront.net/)
-```
-
-
-*Note:* Amplify Video also offers the option to protect the content with a signed URL, you can find more information on how to use signed url using amplify video at Getting Started with VOD (https://github.com/awslabs/amplify-video/wiki/Getting-Started-with-VOD).
 
 **Test Transcoding**
 
