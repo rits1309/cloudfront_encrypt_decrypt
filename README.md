@@ -3,7 +3,8 @@
 Creating a video-on-demand (VOD) solution on AWS (Amazon Web Services) typically involves using various AWS services to store, transcode, and deliver video content to end-users.Also in some cases it becomes vulnearble for sensitive data.So data can not be simply kept in S3.It should be encrypted so that none can use it without proper authentication.
 
 ## Architecture overview
-<img src="/doc/architecture.png" alt="Architecture"/>
+
+**<img src="/doc/architecture.png" alt="Architecture"/>**
 
 ## Solution components
 The above architecture diagram illustrates highly secure infrastructure to streamline video on demand solution by automating the configuration and management of ingesting and encoding components for highly reliable delivery of video content.
